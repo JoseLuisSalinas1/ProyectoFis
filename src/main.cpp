@@ -28,7 +28,7 @@ int main()
     }
 
     sf::Sprite ship(shipTexture);
-    ship.setScale({0.2f, 0.2f});
+    ship.setScale({0.3f, 0.3f});
 
     ship.setPosition({50.f, 200.f});
 
