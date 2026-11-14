@@ -2,27 +2,35 @@
 #include <iostream>
 #include <optional>
 
+using namespace std;
+
 int main()
 {
     sf::RenderWindow window(
         sf::VideoMode({1200, 800}),
-        "SS United States - My First SFML Game"
-    );
+        "Soot & Shrapnel");
 
     window.setFramerateLimit(60);
 
     sf::Texture shipTexture;
+    sf::Texture USSIowaTexture;
 
     if (!shipTexture.loadFromFile("assets/SSUnitedStates.png"))
     {
-        std::cout << "No funciona la textura." << std::endl;
+        cout << "No funciona la textura." << std::endl;
+        return -1;
+    }
+
+    if (!USSIowaTexture.loadFromFile("assets/USSIowa.png"))
+    {
+        cout << "No Funciona la Textura." << endl;
         return -1;
     }
 
     sf::Sprite ship(shipTexture);
-    ship.setScale({0.5f, 0.5f});
+    ship.setScale({0.2f, 0.2f});
 
-    ship.setPosition({100.f, 100.f});
+    ship.setPosition({50.f, 200.f});
 
     while (window.isOpen())
     {
@@ -43,5 +51,3 @@ int main()
 
     return 0;
 }
-
-
