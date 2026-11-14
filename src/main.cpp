@@ -28,7 +28,7 @@ int main()
         return -1;
     }
 
-    if (!SSJeremiah.loadFromFile("assets/JeremiahOBrien.png"))
+    if (!SSJeremiah.loadFromFile("assets/SSJeremiahOBrien.png"))
     {
         cout << "No Funciona La Textura" << endl;
         return -1;
