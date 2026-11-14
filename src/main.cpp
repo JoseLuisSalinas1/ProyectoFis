@@ -42,8 +42,6 @@ int main()
     ship.setScale({0.3f, 0.3f});
     ship.setPosition({50.f, 200.f});
 
-
-
     while (window.isOpen())
     {
         while (const std::optional event = window.pollEvent())
@@ -57,7 +55,7 @@ int main()
         window.clear(sf::Color(30, 30, 45));
 
         window.draw(ship);
-
+        window.draw(SSJeremiahOBrien);
         window.display();
     }
 
