@@ -14,6 +14,7 @@ int main()
 
     sf::Texture shipTexture;
     sf::Texture USSIowaTexture;
+    sf::Texture SSJeremiah;
 
     if (!shipTexture.loadFromFile("assets/SSUnitedStates.png"))
     {
@@ -27,10 +28,21 @@ int main()
         return -1;
     }
 
+    if (!SSJeremiah.loadFromFile("assets/JeremiahOBrien.png"))
+    {
+        cout << "No Funciona La Textura" << endl;
+        return -1;
+    }
+
+    sf::Sprite SSJeremiahOBrien(SSJeremiah);
+    SSJeremiahOBrien.setScale({0.2f, 0.2f});
+    SSJeremiahOBrien.setPosition({50.f, 400.f});
+
     sf::Sprite ship(shipTexture);
     ship.setScale({0.3f, 0.3f});
-
     ship.setPosition({50.f, 200.f});
+
+
 
     while (window.isOpen())
     {
