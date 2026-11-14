@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/josel/Downloads/ProyectoFis/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -g -std=gnu++17 -o CMakeFiles\\ProyectoFis.dir\\src\\main.cpp.obj -c C:\\Users\\josel\\Downloads\\ProyectoFis\\src\\main.cpp",
+  "file": "C:/Users/josel/Downloads/ProyectoFis/src/main.cpp",
+  "output": "C:/Users/josel/Downloads/ProyectoFis/build/CMakeFiles/ProyectoFis.dir/src/main.cpp.obj"
+}
+]

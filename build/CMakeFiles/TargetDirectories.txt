@@ -1,0 +1,3 @@
+C:/Users/josel/Downloads/ProyectoFis/build/CMakeFiles/ProyectoFis.dir
+C:/Users/josel/Downloads/ProyectoFis/build/CMakeFiles/edit_cache.dir
+C:/Users/josel/Downloads/ProyectoFis/build/CMakeFiles/rebuild_cache.dir
