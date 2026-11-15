@@ -1,9 +1,7 @@
 # ninja log v7
-5	690	8163287359742227	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-690	819	8163287366598871	ProyectoFis.exe	5a4802157748784c
-17	706	8163288951884576	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-707	815	8163288958781596	ProyectoFis.exe	5a4802157748784c
-29	787	8163292021884190	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-790	900	8163292029488019	ProyectoFis.exe	5a4802157748784c
-4	703	8163293811381698	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-703	824	8163293818373543	ProyectoFis.exe	5a4802157748784c
+5	1965	8163683493314292	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
+1965	2172	8163683512922928	ProyectoFis.exe	5a4802157748784c
+6	1074	8164594672053444	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
+1075	1484	8164594682741459	ProyectoFis.exe	5a4802157748784c
+5	713	8164595911873399	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
+713	836	8164595918958945	ProyectoFis.exe	5a4802157748784c
