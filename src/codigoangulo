@@ -1,0 +1,46 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+
+    double peso, altura, velocidad, angulo;
+    double tiempo = 0;
+    double gravedad = 9.81;
+    double radianes;
+    double velocidadY;
+    double posicionY;
+
+    cout << "Peso del proyectil (kg): ";
+    cin >> peso;
+
+    cout << "Altura del barco (m): ";
+    cin >> altura;
+
+    cout << "Velocidad del proyectil (m/s): ";
+    cin >> velocidad;
+
+    cout << "Angulo de lanzamiento (grados): ";
+    cin >> angulo;
+
+    radianes = angulo * 3.14159265 / 180;
+
+    velocidadY = velocidad * sin(radianes);
+
+    posicionY = altura;
+
+    while (posicionY > 0) {
+
+        tiempo += 0.01;
+
+        posicionY = altura + velocidadY * tiempo
+                    - 0.5 * gravedad * tiempo * tiempo;
+
+    }
+
+    cout << "\nEl proyectil cae despues de "
+         << tiempo << " segundos." << endl;
+
+    return 0;
+}
