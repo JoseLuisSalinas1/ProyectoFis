@@ -6,13 +6,12 @@ using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(
-        sf::VideoMode({1200, 800}),
-        "Soot & Shrapnel");
+    sf::RenderWindow window(sf::VideoMode({1200, 800}), "Soot & Shrapnel");
 
     window.setFramerateLimit(60);
 
     sf::View camera;
+    camera = window.getDefaultView();
 
     sf::Texture shipTexture;
     sf::Texture USSIowaTexture;
@@ -51,12 +50,12 @@ int main()
 
     sf::Sprite ship(shipTexture);
     ship.setScale({0.3f, 0.3f});
-    ship.setPosition({50.f, 200.f});
+    ship.setPosition({700.f, 700.f});
 
     sf::Sprite Ocean(OceanTexture);
     // Ocean.setScale({0.15f, 0.15f});
-    Ocean.setTextureRect(sf::IntRect({250, 250}, {5000, 5000}));
-    Ocean.setScale({0.3f, 0.3f});
+    Ocean.setTextureRect(sf::IntRect({0, 0}, {5000, 5000}));
+    //Ocean.setScale({0.3f, 0.3f});
 
     while (window.isOpen())
     {
@@ -70,7 +69,12 @@ int main()
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
         {
-            ship.move({0.5f, 0.f});
+            ship.move({1.f, 0.f});
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+        {
+            ship.move({-1.f, 0.f});
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::E))
@@ -84,6 +88,7 @@ int main()
         }
 
         window.clear(sf::Color(30, 30, 45));
+        window.setView(camera);
         window.draw(Ocean);
         window.draw(ship);
         camera.setCenter(ship.getPosition());
