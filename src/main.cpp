@@ -54,10 +54,10 @@ int main()
     ship.setPosition({50.f, 200.f});
 
     sf::Sprite Ocean(OceanTexture);
-    //Ocean.setScale({0.15f, 0.15f});
-    Ocean.setTextureRect(sf::IntRect({250,250}, {5000,5000}));
+    // Ocean.setScale({0.15f, 0.15f});
+    Ocean.setTextureRect(sf::IntRect({250, 250}, {5000, 5000}));
     Ocean.setScale({0.3f, 0.3f});
-    
+
     while (window.isOpen())
     {
         while (const std::optional event = window.pollEvent())
@@ -68,17 +68,27 @@ int main()
             }
         }
 
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
+        {
+            ship.move({0.5f, 0.f});
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::E))
+        {
+            ship.rotate(sf::degrees(0.3f));
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
+        {
+            ship.rotate(sf::degrees(-0.3f));
+        }
+
         window.clear(sf::Color(30, 30, 45));
         window.draw(Ocean);
         window.draw(ship);
         camera.setCenter(ship.getPosition());
-        window.draw(SSJeremiahOBrien);
+        // window.draw(SSJeremiahOBrien);
         window.display();
     }
-    /*void loop()
-    {
-
-
-    }*/
     return 0;
 }
