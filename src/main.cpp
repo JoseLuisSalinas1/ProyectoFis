@@ -55,7 +55,7 @@ int main()
     sf::Sprite Ocean(OceanTexture);
     // Ocean.setScale({0.15f, 0.15f});
     Ocean.setTextureRect(sf::IntRect({0, 0}, {5000, 5000}));
-    //Ocean.setScale({0.3f, 0.3f});
+    // Ocean.setScale({0.3f, 0.3f});
 
     while (window.isOpen())
     {
@@ -64,6 +64,18 @@ int main()
             if (event->is<sf::Event::Closed>())
             {
                 window.close();
+            }
+
+            if (const auto *wheel = event->getIf<sf::Event::MouseWheelScrolled>())
+            {
+                if (wheel->delta > 0)
+                {
+                    camera.zoom(0.9f);
+                }
+                if (wheel->delta < 0)
+                {
+                    camera.zoom(1.1f);
+                }
             }
         }
 
@@ -91,7 +103,8 @@ int main()
         window.setView(camera);
         window.draw(Ocean);
         window.draw(ship);
-        camera.setCenter(ship.getPosition());
+        camera.setCenter({ship.getPosition().x + 400.f,
+                          ship.getPosition().y + 50.f});
         // window.draw(SSJeremiahOBrien);
         window.display();
     }
