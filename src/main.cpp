@@ -1,8 +1,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <optional>
-
+#include <cmath>
 using namespace std;
+
+// float ShipMovementWithAngle;
+
+float rotation = 0;
 
 int main()
 {
@@ -59,6 +63,7 @@ int main()
 
     while (window.isOpen())
     {
+        double properRadians = rotation * ((2 * 3.1415926535) / 360);
         while (const std::optional event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
@@ -81,30 +86,33 @@ int main()
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
         {
-            ship.move({1.f, 0.f});
+            // double rotation = ship.getRotation().asDegrees();
+            ship.move({cos((properRadians)) * 2, sin((properRadians)) * 2});
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
         {
-            ship.move({-1.f, 0.f});
+            // double rotation = ship.getRotation().asDegrees();
+            ship.move({cos((properRadians)) * -2, sin((properRadians)) * -2});
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::E))
         {
             ship.rotate(sf::degrees(0.3f));
+            rotation = rotation + 0.3;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
         {
             ship.rotate(sf::degrees(-0.3f));
+            rotation = rotation - 0.3;
         }
 
         window.clear(sf::Color(30, 30, 45));
         window.setView(camera);
         window.draw(Ocean);
         window.draw(ship);
-        camera.setCenter({ship.getPosition().x + 400.f,
-                          ship.getPosition().y + 50.f});
+        camera.setCenter({(ship.getPosition().x + (cos((properRadians))*400.f)), (ship.getPosition().y + (sin((properRadians)) * -50.f))});
         // window.draw(SSJeremiahOBrien);
         window.display();
     }
