@@ -6,13 +6,17 @@ using namespace std;
 
 // float ShipMovementWithAngle;
 
+int Wallpaper();
+int Menu();
+
 float rotation = 0;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode({1200, 800}), "Soot & Shrapnel");
-
+    sf::RenderWindow window(sf::VideoMode({1920, 1080}), "Soot & Shrapnel");
     window.setFramerateLimit(60);
+    
+    int Wallpaper();
 
     sf::View camera;
     camera = window.getDefaultView();
@@ -55,6 +59,7 @@ int main()
     sf::Sprite ship(shipTexture);
     ship.setScale({0.3f, 0.3f});
     ship.setPosition({700.f, 700.f});
+    ship.setOrigin({1150.f, 128.f});
 
     sf::Sprite Ocean(OceanTexture);
     // Ocean.setScale({0.15f, 0.15f});
@@ -63,7 +68,7 @@ int main()
 
     while (window.isOpen())
     {
-        double properRadians = rotation * ((2 * 3.1415926535) / 360);
+        float properRadians = rotation * ((2 * 3.1415926535) / 360);
         while (const std::optional event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
@@ -98,21 +103,21 @@ int main()
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::E))
         {
-            ship.rotate(sf::degrees(0.3f));
-            rotation = rotation + 0.3;
+            ship.rotate(sf::degrees(0.2f));
+            rotation = rotation + 0.2;
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
         {
-            ship.rotate(sf::degrees(-0.3f));
-            rotation = rotation - 0.3;
+            ship.rotate(sf::degrees(-0.2f));
+            rotation = rotation - 0.2;
         }
 
         window.clear(sf::Color(30, 30, 45));
         window.setView(camera);
         window.draw(Ocean);
         window.draw(ship);
-        camera.setCenter({(ship.getPosition().x + (cos((properRadians))*400.f)), (ship.getPosition().y + (sin((properRadians)) * -50.f))});
+        camera.setCenter({(ship.getPosition().x), (ship.getPosition().y)});
         // window.draw(SSJeremiahOBrien);
         window.display();
     }
