@@ -57,6 +57,14 @@ build CMakeFiles/ProyectoFis.dir/src/main.cpp.obj: CXX_COMPILER__ProyectoFis_uns
   OBJECT_FILE_DIR = CMakeFiles\ProyectoFis.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\ProyectoFis.dir
 
+build CMakeFiles/ProyectoFis.dir/src/Wallpaper.cpp.obj: CXX_COMPILER__ProyectoFis_unscanned_Debug C$:/Users/josel/Downloads/ProyectoFis/src/Wallpaper.cpp || cmake_object_order_depends_target_ProyectoFis
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ProyectoFis.dir\src\Wallpaper.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles\ProyectoFis.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProyectoFis.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\ProyectoFis.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ProyectoFis
@@ -65,7 +73,7 @@ build CMakeFiles/ProyectoFis.dir/src/main.cpp.obj: CXX_COMPILER__ProyectoFis_uns
 #############################################
 # Link the executable ProyectoFis.exe
 
-build ProyectoFis.exe: CXX_EXECUTABLE_LINKER__ProyectoFis_Debug CMakeFiles/ProyectoFis.dir/src/main.cpp.obj | C$:/msys64/ucrt64/lib/libsfml-graphics.dll.a C$:/msys64/ucrt64/lib/libsfml-window.dll.a C$:/msys64/ucrt64/lib/libsfml-system.dll.a
+build ProyectoFis.exe: CXX_EXECUTABLE_LINKER__ProyectoFis_Debug CMakeFiles/ProyectoFis.dir/src/main.cpp.obj CMakeFiles/ProyectoFis.dir/src/Wallpaper.cpp.obj | C$:/msys64/ucrt64/lib/libsfml-graphics.dll.a C$:/msys64/ucrt64/lib/libsfml-window.dll.a C$:/msys64/ucrt64/lib/libsfml-system.dll.a
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = C:/msys64/ucrt64/lib/libsfml-graphics.dll.a  C:/msys64/ucrt64/lib/libsfml-window.dll.a  C:/msys64/ucrt64/lib/libsfml-system.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

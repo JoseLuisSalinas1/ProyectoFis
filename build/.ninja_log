@@ -1,9 +1,11 @@
 # ninja log v7
-26	757	8169050874531697	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-758	867	8169050881923396	ProyectoFis.exe	5a4802157748784c
-21	1164	8170074395892466	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-1164	1418	8170074407334324	ProyectoFis.exe	5a4802157748784c
-26	1536	8170085945325822	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-1539	1700	8170085960433382	ProyectoFis.exe	5a4802157748784c
-30	783	8170089110010824	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
-784	893	8170089117545153	ProyectoFis.exe	5a4802157748784c
+22	3063	8170960729514550	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
+3064	3288	8170960759941779	ProyectoFis.exe	5a4802157748784c
+36	852	8171011098543606	CMakeFiles/ProyectoFis.dir/src/Wallpaper.cpp.obj	1f65440dbeec8729
+29	865	8171011098478490	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
+865	1022	8171011106827116	ProyectoFis.exe	87af8bebc5a079b7
+30	610	8171013034440354	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
+611	728	8171013040245790	ProyectoFis.exe	87af8bebc5a079b7
+51	4187	8171032394068350	CMakeFiles/ProyectoFis.dir/src/Wallpaper.cpp.obj	1f65440dbeec8729
+46	4197	8171032394028338	CMakeFiles/ProyectoFis.dir/src/main.cpp.obj	ae45ae0248a72eb6
+4198	4540	8171032435538572	ProyectoFis.exe	87af8bebc5a079b7

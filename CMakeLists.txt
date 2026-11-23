@@ -10,6 +10,7 @@ find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
 add_executable(ProyectoFis
     src/main.cpp
+    src/Wallpaper.cpp
 )
 
 target_link_libraries(ProyectoFis PRIVATE

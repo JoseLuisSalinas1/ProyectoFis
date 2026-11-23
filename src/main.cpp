@@ -2,21 +2,22 @@
 #include <iostream>
 #include <optional>
 #include <cmath>
+#include "../include/Wallpaper.hpp"
+#include "../include/Menu.hpp"
 using namespace std;
 
 // float ShipMovementWithAngle;
-
-int Wallpaper();
-int Menu();
 
 float rotation = 0;
 
 int main()
 {
+    sf::Clock Time;
     sf::RenderWindow window(sf::VideoMode({1920, 1080}), "Soot & Shrapnel");
     window.setFramerateLimit(60);
     
-    int Wallpaper();
+    sf::Texture wallpaperTexture;
+    std::optional<sf::Sprite> wallpaper = LoadRandomWallpaper(wallpaperTexture);
 
     sf::View camera;
     camera = window.getDefaultView();
@@ -114,6 +115,11 @@ int main()
         }
 
         window.clear(sf::Color(30, 30, 45));
+        window.setView(window.getDefaultView());
+        if (wallpaper)
+        {
+            window.draw(*wallpaper);
+        }
         window.setView(camera);
         window.draw(Ocean);
         window.draw(ship);
